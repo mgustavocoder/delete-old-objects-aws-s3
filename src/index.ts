@@ -1,9 +1,10 @@
 import AWS from 'aws-sdk'
 import sortBy from 'lodash.sortby'
 import findIndex from 'lodash.findindex'
+import * as env from 'env-var'
 
 (async () => {
-  const AGE_IN_DAYS = 5 // The number of days to consider an object old.
+  const AGE_IN_DAYS: number = env.get(process.env.AGE_IN_DAYS).required().asIntPositive() // The number of days to consider an object old.
 
   const s3 = new AWS.S3()
 
@@ -21,8 +22,8 @@ import findIndex from 'lodash.findindex'
     console.error(error)
   }
 
-  async function listBucket () {
-    const params = {
+  async function listBucket (s3) {
+    const params: any = {
       Bucket: process.env.BUCKET,
       Prefix: process.env.PREFIX
     }

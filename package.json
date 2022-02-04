@@ -8,21 +8,27 @@
     "node": ">=14.15.0"
   },
   "scripts": {
-    "start": "node --require dotenv/config index.js",
+    "start": "npx tsc && node --require dotenv/config dist/index.js dotenv_config_path=.env",
+    "start:dev": "npx tsc && node --require dotenv/config dist/index.js dotenv_config_path=.env.dev",
+    "start:prod": "npx tsc && node --require dotenv/config dist/index.js dotenv_config_path=.env.prod",
     "lint": "npx eslint ."
   },
   "author": "@mgustavocoder",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^17.0.14",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.1"
+    "eslint-plugin-promise": "^5.2.0"
   },
   "dependencies": {
     "aws-sdk": "^2.1018.0",
     "dotenv": "^10.0.0",
+    "env-var": "^7.1.1",
     "lodash.findindex": "^4.6.0",
     "lodash.sortby": "^4.7.0"
   }

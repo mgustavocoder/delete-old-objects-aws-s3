@@ -1,3 +1,4 @@
 node_modules
-.env.homolog
-.env.production
+.env.dev
+.env.prod
+dist
