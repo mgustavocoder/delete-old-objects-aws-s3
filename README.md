@@ -1,8 +1,5 @@
 # Description
-Just delete old objects from an S3 bucket's folder.
-
-## But why?
-So, I had a motivation to do that, you I don't know =)
+Delete objects that is older than an specified date from the AWS S3.
 
 ## How to run it.
 
