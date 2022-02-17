@@ -1,5 +1,5 @@
 # Description
-Delete objects that is older than an specified date from the AWS S3.
+Delete AWS S3 objects that were created more than N days ago.
 
 ## How to run it.
 
