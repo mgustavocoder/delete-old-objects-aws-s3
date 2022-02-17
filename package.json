@@ -1,7 +1,7 @@
 {
   "name": "delete-old-s3-files",
   "version": "1.0.0",
-  "description": "Just delete old objects from an S3 bucket's folder.",
+  "description": "Delete AWS S3 objects that were created more than N days ago.",
   "main": "index.js",
   "type": "module",
   "engines": {
