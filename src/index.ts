@@ -13,7 +13,7 @@ import * as env from 'env-var'
     let oldObjects = s3Objects.filter(s3Object => !isOldObject(s3Object))
     if (oldObjects.length > 0) {
       oldObjects = oldObjects.map(s3Object => ({ Key: s3Object.Key }))
-      oldObjects.slice(0, 1000)
+      oldObjects = oldObjects.slice(0, 1000)
       await deleteObjects(oldObjects)
     }
     console.info(`${s3Objects.length} objects found`)
